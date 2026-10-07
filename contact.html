@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Mont-Ecom</title>
   <meta name="description" content="Contactez Mont-Ecom pour un appel découverte gratuit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,8 +32,7 @@
   <h2>Réserver un <span>appel découverte</span></h2>
   <p class="intro">30 minutes, gratuit, sans engagement — choisissez directement le créneau qui vous convient.</p>
 
-  <div class="calendly-inline"
-       style="background:var(--blanc); border-radius:1rem; padding:1rem; box-shadow:0 4px 18px rgba(26,16,48,.08);">
+  <div class="calendly-inline">
     <iframe src="https://calendly.com/mont-ecom/first"
             style="min-width:320px; height:700px; border:0;" width="100%"
             title="Prise de rendez-vous Calendly"></iframe>
@@ -45,10 +47,11 @@
   <h2>Envoyer un <span>message</span></h2>
   <p class="intro">Le formulaire ci-dessous est un Google Forms intégré : les réponses arrivent directement dans ta feuille Google Sheets liée.</p>
 
-  
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdLEnEtqlaoc1Grn5tAMs7zVy7M_1toOeOGPF-lkxPHOWfjw/viewform?usp=publish-editor"
-          style="min-width:320px; height:700px; border:0;" width="100%"
-          title="Formulaire de contact Mont-Ecom">Chargement…</iframe>
+  <div class="encart-iframe">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdLEnEtqlaoc1Grn5tAMs7zVy7M_1toOeOGPF-lkxPHOWfjw/viewform?usp=header"
+            style="min-width:320px; height:700px; border:0;" width="100%"
+            title="Formulaire de contact Mont-Ecom">Chargement…</iframe>
+  </div>
 </section>
 
 <footer>
