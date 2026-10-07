@@ -1,11 +1,11 @@
 /* ============ MONT-ECOM — feuille de style commune ============ */
 :root {
-  --violet: #6C2BD9;
-  --rose: #FF3D77;
-  --orange: #FF8A00;
-  --jaune: #FFD447;
-  --encre: #1A1030;
-  --fond: #FFF9F2;
+  --violet: #287282;   /* bleu canard — couleur principale */
+  --rose: #1A2E35;     /* encre profonde — textes, boutons */
+  --orange: #5E9AA3;   /* canard clair — dégradés, hover */
+  --jaune: #C29B4A;    /* or discret — badges, surbrillance */
+  --encre: #1A2E35;
+  --fond: #FAF7F0;     /* blanc cassé */
   --blanc: #ffffff;
 }
 
