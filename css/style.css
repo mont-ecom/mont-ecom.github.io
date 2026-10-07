@@ -1,0 +1,133 @@
+/* ============ MONT-ECOM — feuille de style commune ============ */
+:root {
+  --violet: #6C2BD9;
+  --rose: #FF3D77;
+  --orange: #FF8A00;
+  --jaune: #FFD447;
+  --encre: #1A1030;
+  --fond: #FFF9F2;
+  --blanc: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--fond);
+  color: var(--encre);
+  line-height: 1.7;
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--blanc);
+  box-shadow: 0 2px 12px rgba(26,16,48,.08);
+  position: sticky; top: 0; z-index: 10;
+}
+.nav .logo {
+  font-weight: 800; font-size: 1.4rem; text-decoration: none;
+  background: linear-gradient(90deg, var(--violet), var(--rose), var(--orange));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.nav ul { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+.nav a { text-decoration: none; color: var(--encre); font-weight: 600; }
+.nav a:hover, .nav a.actif { color: var(--violet); border-bottom: 3px solid var(--rose); }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 5rem 2rem; text-align: center;
+  background: linear-gradient(135deg, var(--violet), var(--rose) 55%, var(--orange));
+  color: var(--blanc);
+}
+.hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; }
+.hero p { max-width: 640px; margin: 1rem auto 2rem; font-size: 1.2rem; }
+
+.btn {
+  display: inline-block; padding: .9rem 2rem; border-radius: 999px;
+  background: var(--encre); color: var(--blanc); font-weight: 700;
+  text-decoration: none; transition: transform .15s;
+}
+.btn:hover { transform: scale(1.05); }
+.btn.clair { background: var(--blanc); color: var(--violet); }
+.btn.jaune { background: var(--jaune); color: var(--encre); }
+
+/* ---------- Sections génériques ---------- */
+.section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+.section h2 {
+  font-size: 2rem; margin-bottom: 1.5rem; text-align: center;
+}
+.section h2 span {
+  background: linear-gradient(90deg, var(--rose), var(--orange));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.intro { text-align: center; max-width: 700px; margin: 0 auto 2.5rem; }
+
+.grille {
+  display: grid; gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.carte {
+  background: var(--blanc); border-radius: 1rem; padding: 1.8rem;
+  box-shadow: 0 4px 18px rgba(26,16,48,.08);
+  border-top: 5px solid var(--rose);
+}
+.carte:nth-child(2) { border-top-color: var(--orange); }
+.carte:nth-child(3) { border-top-color: var(--violet); }
+.carte h3 { margin-bottom: .6rem; font-size: 1.2rem; }
+.carte p { color: #555; }
+
+/* ---------- Blog ---------- */
+.article-carte {
+  display: block; background: var(--blanc); border-radius: 1rem;
+  padding: 1.8rem; text-decoration: none; color: var(--encre);
+  box-shadow: 0 4px 18px rgba(26,16,48,.08);
+  transition: transform .15s;
+}
+.article-carte:hover { transform: translateY(-4px); }
+.article-carte .date {
+  display: inline-block; background: var(--jaune); color: var(--encre);
+  padding: .2rem .8rem; border-radius: 999px; font-size: .85rem; font-weight: 700;
+}
+.article-carte h3 { margin: .6rem 0; }
+
+/* ---------- Corps d'article ---------- */
+.article-corps { max-width: 720px; margin: 0 auto; }
+.article-corps h1 { font-size: 2.2rem; margin-bottom: .5rem; }
+.article-corps h2 { font-size: 1.5rem; margin: 2rem 0 .8rem; text-align: left; }
+.article-corps p { margin-bottom: 1rem; }
+.article-corps blockquote {
+  border-left: 5px solid var(--rose); background: var(--blanc);
+  padding: 1rem 1.5rem; margin: 1.5rem 0; font-style: italic;
+}
+.meta { color: #777; font-size: .95rem; margin-bottom: 2rem; }
+
+/* ---------- Contact ---------- */
+form { max-width: 560px; margin: 0 auto; background: var(--blanc);
+  padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 18px rgba(26,16,48,.08); }
+label { display: block; font-weight: 600; margin: 1rem 0 .3rem; }
+input, textarea {
+  width: 100%; padding: .8rem; border: 2px solid #eee; border-radius: .6rem;
+  font: inherit; background: var(--fond);
+}
+input:focus, textarea:focus { outline: none; border-color: var(--violet); }
+button.btn { margin-top: 1.5rem; border: none; cursor: pointer; }
+
+/* ---------- Pied de page ---------- */
+footer {
+  background: var(--encre); color: #ccc; text-align: center;
+  padding: 2.5rem 1rem; margin-top: 4rem;
+}
+footer a { color: var(--jaune); text-decoration: none; }
+
+/* ---------- Divers ---------- */
+.badge-nouveau {
+  display: inline-block; background: var(--rose); color: var(--blanc);
+  padding: .2rem .9rem; border-radius: 999px; font-size: .8rem;
+  font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+}
+@media (max-width: 640px) {
+  .nav { flex-direction: column; gap: .8rem; }
+}
