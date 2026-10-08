@@ -84,6 +84,15 @@ h1, h2, h3, .logo {
 .carte:nth-child(3) { border-top-color: var(--jaune); }
 .carte h3 { margin-bottom: .6rem; font-size: 1.2rem; }
 .carte p { color: #4a5a60; }
+.carte a.btn { margin-top: 1rem; }
+
+/* Prix (page Services) */
+.prix {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem; font-weight: 700; color: var(--violet);
+  margin: .4rem 0 .8rem;
+}
+.prix small { font-size: .85rem; font-weight: 400; color: #777; }
 
 /* ---------- Blog ---------- */
 .article-carte {
@@ -138,6 +147,9 @@ footer a { color: var(--jaune); text-decoration: none; }
   padding: .2rem .9rem; border-radius: 999px; font-size: .8rem;
   font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
 }
+.reseaux { margin: .5rem 0; display: flex; gap: 1.2rem; justify-content: center; }
+.reseaux a { color: #ccc; transition: color .15s, transform .15s; display: inline-block; }
+.reseaux a:hover { color: var(--jaune); transform: translateY(-2px); }
 @media (max-width: 640px) {
   .nav { flex-direction: column; gap: .8rem; }
 }
